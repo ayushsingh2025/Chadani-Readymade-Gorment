@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Chadani Readymade Garments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header + Navigation -->
+    <header>
+        <div class="logo">
+            <h1>👕Chadani Readymade Garments</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="catalog.html" class="active">Catalog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">☰</div>
+    </header>
+
+    <main>
+        <!-- Catalog Section -->
+        <section id="catalog">
+            <h2>Our Products</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="men">Men</button>
+                <button class="filter-btn" data-category="women">Women</button>
+                <button class="filter-btn" data-category="kids">Kids</button>
+            </div>
+
+            <div class="catalog">
+                <div class="product" data-category="men">
+                    <img src="images/product1.jpg" alt="Men's Shirt">
+                    <h3>Men's Shirt</h3>
+                    <p>Price: ₹499</p>
+                    <a href="https://wa.me/919555471342?text=I%20want%20to%20order%20Men's%20Shirt" class="btn">WhatsApp Order</a>
+                </div>
+
+                <div class="product" data-category="women">
+                    <img src="images/product2.jpg" alt="Women's Dress">
+                    <h3>Women's Dress</h3>
+                    <p>Price: ₹799</p>
+                    <a href="https://wa.me/919555471342?text=I%20want%20to%20order%20Women's%20Dress" class="btn">WhatsApp Order</a>
+                </div>
+
+                <div class="product" data-category="kids">
+                    <img src="images/product3.jpg" alt="Kids Wear">
+                    <h3>Kids Wear</h3>
+                    <p>Price: ₹299</p>
+                    <a href="https://wa.me/919555471342?text=I%20want%20to%20order%20Kids%20Wear" class="btn">WhatsApp Order</a>
+                </div>
+
+                <div class="product" data-category="men">
+                    <img src="images/product4.jpg" alt="Men's T-Shirt">
+                    <h3>Men's T-Shirt</h3>
+                    <p>Price: ₹349</p>
+                    <a href="https://wa.me/919555471342?text=I%20want%20to%20order%20Men's%20T-Shirt" class="btn">WhatsApp Order</a>
+                </div>
+
+                <div class="product" data-category="women">
+                    <img src="images/product5.jpg" alt="Women's Top">
+                    <h3>Women's Top</h3>
+                    <p>Price: ₹399</p>
+                    <a href="https://wa.me/919555471342?text=I%20want%20to%20order%20Women's%20Top" class="btn">WhatsApp Order</a>
+                </div>
+
+                <!-- Add more products here -->
+            </div>
+        </section>
+    <!-- Scripts -->
+    <script>
+        // Navigation toggle (mobile)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Product filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+                products.forEach(product => {
+                    if (category === 'all' || product.getAttribute('data-category') === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- SEO META -->
+    <title>Chadani Readymade Garment | Best Cloth Shop in Azamgarh</title>
+    <meta name="description" content="Chadani Readymade Garment - Best readymade clothes shop near Latghat Petrol Pump, Azamgarh. Men, women and kids fashion at best price.">
+    <meta name="keywords" content="Chadani Readymade Garment, cloth shop Azamgarh, readymade garments, Latghat cloth shop">
+    <meta name="author" content="Chadani Readymade Garment">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">👕 Chadani Readymade Garment</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section class="hero animate">
+    <div class="hero-text animate">
+        <h1>Best Readymade<br>Clothes in Azamgarh</h1>
+
+        <p>
+            Latest fashion collection for men, women & kids.  
+            Quality clothes at affordable prices.
+        </p>
+
+        <div class="buttons animate">
+            <select aria-label="Select City">
+                <option>Select Your City</option>
+                <option>Azamgarh</option>
+                <option>Mau</option>
+                <option>Ballia</option>
+            </select>
+
+            <a href="https://wa.me/919559321656?text=Hello%20Chadani%20Readymade%20Garment%20👕%0AMujhe%20kapdon%20ke%20details%20chahiye.%0AMain%20shop%20visit%20karunga."
+               target="_blank" class="whatsapp-btn">
+               💬 WhatsApp Enquiry
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Latghat+Petrol+Pump+Azamgarh+276136"
+               target="_blank" class="map-btn">
+               📍 Visit Our Shop
+            </a>
+
+            <a href="tel:9559321656" class="call-btn">
+               📞 Call Now
+            </a>
+        </div>
+
+        <div class="social">
+            🌐 Near Latghat Petrol Pump, Azamgarh – 276136
+        </div>
+    </div>
+
+    <div class="hero-image animate">
+        <img src="model.jpg" alt="Readymade garments shop in Azamgarh" loading="lazy">
+    </div>
+</section>
+</main>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
+<script>
+const animatedItems = document.querySelectorAll('.animate');
+
+function showOnScroll() {
+    animatedItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (itemTop < screenHeight - 100) {
+            item.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+
+</body>
+</html>

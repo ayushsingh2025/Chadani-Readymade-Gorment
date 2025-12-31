@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>About Us | Chadani Readymade Garment Azamgarh</title>
+    <meta name="description" content="Learn about Chadani Readymade Garment, trusted cloth shop near Latghat Petrol Pump Azamgarh. Quality garments for all.">
+    <meta name="keywords" content="about Chadani garment, cloth shop Azamgarh, Latghat readymade shop">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">👕 Chadani Readymade Garment</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section class="about-section animate">
+
+    <h1>About Our Shop</h1>
+
+    <div class="shop-photo">
+        <img src="images/shop.jpg" alt="Chadani Readymade Garment shop Azamgarh" loading="lazy">
+    </div>
+
+    <p>
+        <strong>Chadani Readymade Garment</strong> ek trusted cloth shop hai jo
+        Latghat Petrol Pump ke pass, Azamgarh me sthit hai.
+        Yahan men, women aur kids ke liye latest fashion garments milte hain.
+    </p>
+
+    <p>
+        Hum quality aur reasonable price par vishwas rakhte hain.
+        <strong>Home delivery available nahi hai</strong> —
+        purchase ke liye shop visit karna hota hai.
+    </p>
+
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>✔ Latest Fashion Collection</li>
+        <li>✔ Fixed & Reasonable Price</li>
+        <li>✔ Trusted Local Shop</li>
+        <li>✔ Friendly Service</li>
+    </ul>
+
+    <h2>Shop Address</h2>
+    <p>
+        📍 Latghat Petrol Pump ke pass,<br>
+        Azamgarh – 276136
+    </p>
+
+    <div class="about-buttons">
+        <a href="https://wa.me/919559321656" target="_blank" class="whatsapp-btn">
+            💬 WhatsApp Enquiry
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Latghat+Petrol+Pump+Azamgarh+276136"
+           target="_blank" class="map-btn">
+           📍 Visit Our Shop
+        </a>
+    </div>
+
+</section>
+</main>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
+<script>
+const animatedItems = document.querySelectorAll('.animate');
+
+function showOnScroll() {
+    animatedItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (itemTop < screenHeight - 100) {
+            item.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+
+</body>
+</html>
